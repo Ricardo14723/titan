@@ -1,0 +1,211 @@
+ <!--Estilos CSS-->
+<style>
+    .download-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+        border: 2px solid #dee2e6;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .download-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #007bff;
+    }
+    
+    .download-icon {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 24px;
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    }
+    
+    .download-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .download-quality {
+        color: #6c757d;
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    .download-specs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .spec-item {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .spec-label {
+        font-size: 12px;
+        color: #6c757d;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .spec-value {
+        font-size: 14px;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+    
+    .download-button {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        border: none;
+        padding: 12px 40px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+        max-width: 300px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        text-decoration: none;
+    }
+    
+    .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+        background: linear-gradient(135deg, #0056b3, #004085);
+    }
+    
+    .download-button:active {
+        transform: translateY(0);
+    }
+    
+    .password-section {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .password-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .password-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .password-icon {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .password-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .password-container {
+        display: flex;
+        align-items: center;
+        background: rgba(255,255,255,0.2);
+        border: 2px solid rgba(255,255,255,0.3);
+        border-radius: 8px;
+        padding: 12px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .password-text {
+        flex: 1;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+        outline: none;
+        cursor: text;
+    }
+    
+    .password-text::selection {
+        background: rgba(255,255,255,0.3);
+    }
+    
+    .copy-button {
+        background: rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-left: 10px;
+    }
+    
+    .copy-button:hover {
+        background: rgba(255,255,255,0.3);
+        transform: scale(1.05);
+    }
+    
+    .copy-success {
+        background: rgba(25,135,84,0.9) !important;
+        border-color: rgba(25,135,84,1) !important;
+    }
+    
+    @media (max-width: 480px) {
+        .download-specs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .download-button {
+            font-size: 15px;
+            padding: 10px 35px;
+            max-width: 280px;
+        }
+    }
+</style>
